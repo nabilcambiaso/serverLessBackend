@@ -10,6 +10,12 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/users", (req, res) => {
+  res.json({
+    hello: "table of users"
+  });
+});
+
 app.use(`/.netlify/functions/api`, router);
 
 module.exports = app;
